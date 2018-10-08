@@ -9,16 +9,16 @@ include 'install.php';
     <link rel="stylesheet" href="style.css" media="all" />
     <style>
         td.t1{
-            opacity:<?php echo $$_SESSION["opa1"];?>;
+            opacity:<?php echo $_SESSION["opa"][0];?>;
         }
         td.t2{
-            opacity:<?php echo $$_SESSION["opa2"];?>;
+            opacity:<?php echo $_SESSION["opa"][1];?>;
         }
         td.t3{
-            opacity:<?php echo $$_SESSION["opa3"];?>;
+            opacity:<?php echo $_SESSION["opa"][2];?>;
         }
         td.ep{
-            opacity:<?php echo $$_SESSION["opaep"];?>;
+            opacity:<?php echo $_SESSION["opa"][3];?>;
         }
     </style>
 	</head>
@@ -31,15 +31,11 @@ include 'install.php';
 	            <ul id="menu">
 	                    <li><img src="imgs/basket.jpg"><a href="#"></a></li>
 	            </ul>
-							<a href="http://localhost:8888/admin.html">admin page</a>
-			        <div id="form">
-	                    <form name="login" method="post" action="../functions/loginregister.php">
+	            <div id="form">
+	                    <form name="login" method="post" action="loginregister.php">
 	                        <input type="text" name="login" placeholder="Username" / >
 	                        <input type="password" name="password" placeholder="Password" / >
 	                        <input type="submit" name="submit" value="Login / Register" />
-	                    </form>
-											<form align="right" name="login" method="post" action="functions/logout.php">
-	                        <input type="submit" name="submit" value="Logout" />
 	                    </form>
 	            </div>
 			</div>
@@ -59,10 +55,11 @@ include 'install.php';
 
                 <h1>Select your coins</h1>
                 <form method="post" action="category.php" enctype="multipart/form-data" contenteditable="true">
-                        <input type="checkbox" checked="checked" value="Tier 1" name="tier"> Tier 1
-                        <input type="checkbox" checked="checked" value="Tier 2" name="tier"> Tier 2
-                        <input type="checkbox" checked="checked" value="Tier 3" name="tier"> Tier 3
-                        <input type="checkbox" checked="checked" value="Editor" name="tier"> Editor's Pick
+                        <input type="checkbox" value="Tier 1" name="t1"> Tier 1
+                        <input type="checkbox" value="Tier 2" name="t2"> Tier 2
+                        <input type="checkbox" value="Tier 3" name="t3"> Tier 3
+                        <input type="checkbox" value="Editor" name="ep"> Editor's Pick
+                        <input type="submit" value="Filter" name="submit">
                 </form>
             <tr>
                 <td class="t1"><h2 id="1A"><?php echo $_SESSION["coin_instock"][0];?></h2>
@@ -172,7 +169,7 @@ include 'install.php';
         <br />
         <br />
         <h1>Your Order Total: <?php echo $_SESSION["total"][0];?> USD</h1><br />
-        <form method="get" action="functions/addorder.php">
+        <form method="post" action"results.php">
             <input type="submit" name="confirm" value="Confirm Payment" />
         </form>
         </center>

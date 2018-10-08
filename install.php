@@ -14,7 +14,7 @@ $_SESSION['total'] = array();
 $_SESSION['coin_instock'] = array();
 $_SESSION['coin_incart'] = array();
 $_SESSION['coin_price'] = array();
-$file = fopen("cryptos.csv","r");
+$file = fopen("data/cryptos.csv","r");
 
 //while(! feof($file))
 //  {
