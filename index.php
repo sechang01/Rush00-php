@@ -15,7 +15,7 @@ include 'install.php';
     <style>
         td.t1{
             opacity:100;
-        }  
+        }
         td.t2{
             opacity:100;
         }
@@ -28,33 +28,26 @@ include 'install.php';
     </style>
 	</head>
 <body>
-<!--Main Container starts here-->
-	<div class-"main_wrapper>
+	<!--Main Container starts here-->
+		<div class="main_wrapper">
 
-        <!--Header starts here--
-		<div class="header_wrapper">
-			<img id="logo" src="images/logo.gif" />
-			<img id="banner" src="images/ad_banner.gif" />
-        </div>
-        !--Header ends here-->
-        
-		<!--Navagation bar starts here-->
-		<div class="menubar">
-            <ul id="menu">
-                    <li><img src="basket.jpg"><a href="#"></a></li>
-            </ul>
-            <div id="form">
-                    <form method="get" action"results.php" enctype="multipart/form-data">
-                        <input type="text" name="login" placeholder="Login" / >
-                        <input type="text" name="password" placeholder="Password" / >
-                        <input type="submit" name="submit" value="Register / Login" />
-                    </form>
-            </div>
-		</div>
+			<!--Navagation bar starts here-->
+			<div class="menubar">
+	            <ul id="menu">
+	                    <li><img src="basket.jpg"><a href="#"></a></li>
+	            </ul>
+	            <div id="form">
+	                    <form name="login" method="post" action="loginregister.php">
+	                        <input type="text" name="login" placeholder="Username" / >
+	                        <input type="password" name="password" placeholder="Password" / >
+	                        <input type="submit" name="submit" value="Login / Register" />
+	                    </form>
+	            </div>
+			</div>
         <!--Navagation bar ends here-->
-        
+
         <!--Content wrapper starts here-->
-        
+
 		<div class="content_wrapper">
             <div class="container">
                     <img src="crypto.jpg" alt="Crypto Exchange" style="width:100%;">
@@ -64,7 +57,7 @@ include 'install.php';
             <div class="menubar"></div>
 
         <center><table contenteditable="true" width="80%">
-            
+
                 <h1>Select your coins</h1>
                 <form method="get" action"results.php" enctype="multipart/form-data" contenteditable="true">
                         <input type="checkbox" checked="checked" value="Tier 1" name="t1"> Tier 1
