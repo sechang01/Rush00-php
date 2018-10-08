@@ -3,16 +3,12 @@
 if ($_POST["submit"] != "OK" || $_POST["login"] == NULL || $_POST["oldpw"] == NULL || $_POST["newpw"] == NULL)
   print ("ERROR\n");
 else {
-  //if folder doesn't exist mkdir
-  if (!file_exists("../private"))
-    mkdir("../private");
-
   //if file doesnt exist create file
-  if (!file_exists("../private/passwd"))
-    file_put_contents("../private/passwd");
+  if (!file_exists("./passwd"))
+    file_put_contents("./passwd");
 
   //read file
-  $files = file_get_contents("../private/passwd");
+  $files = file_get_contents("./passwd");
   $contents = unserialize($files);
 
   $flag = 1;
@@ -30,7 +26,7 @@ else {
     print("ERROR\n");
     return;
   }
-  file_put_contents("../private/passwd", serialize($contents));
+  file_put_contents("./passwd", serialize($contents));
   print ("OK\n");
 }
 ?>
