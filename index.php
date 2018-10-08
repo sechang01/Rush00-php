@@ -31,6 +31,7 @@ include 'install.php';
 	            <ul id="menu">
 	                    <li><img src="imgs/basket.jpg"><a href="#"></a></li>
 	            </ul>
+							<a href="http://localhost:8888/admin.html">admin page</a>
 	            <div id="form">
 	                    <form name="login" method="post" action="loginregister.php">
 	                        <input type="text" name="login" placeholder="Username" / >
@@ -63,7 +64,7 @@ include 'install.php';
             <tr>
                 <td class="t1"><h2 id="1A"><?php echo $_SESSION["coin_instock"][0];?></h2>
                     <form name="coinvalue" method="post" action"increases.php">
-                        
+
                         <input type="submit" name="coinvalue" value="0"></form>
                         <!--
                     <input class="coin" type="image" src="coins/Bitcoin_coin.jpg" alt="Buy Bitcoin"/><input type="hidden" name="coinvalue" value="0"></form>

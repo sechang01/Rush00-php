@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Admin Page</title>
+<style>
+  body {
+    background-color: #e8f3f8;
+  }
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    color: steelblue;
+  }
+  form {
+    margin: 20px auto;
+    width: 320px;
+    color: steelblue;
+  }
+  input {
+    padding: 10px;
+    font-size: inherit;
+  }
+  input[type="text"] {
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+    border: 2px solid steelblue;
+  }
+  input[type="password"] {
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+    border: 2px solid steelblue;
+  }
+</style>
+</head>
+<body>
+  <h1>Admin Page</h1>
+    <form name="login" method="post" action="adminuser.php">
+        <input type="text" name="login" placeholder="Username" />
+        <input type="password" name="new passwd" placeholder="New Password" />
+        <input type="password" name="old passwd" placeholder="Old Password" />
+
+        <div></div>
+        <input type="submit" name="submit" value="Create" />
+        <input type="submit" name="submit" value="Delete" />
+        <input type="submit" name="submit" value="Modify" />
+
+    </form>
+</body>
+</html>
+
+<!-- Administrative section: In this section, we are asking come up with a way to
+give an exclusive access to some users. Those users will be able to manage the
+content of your site (add, modify, remove articles, categories and users)..
+
+In summary, a user must be able to register, connect, add articles in his basket and
+validate his order. Once validated, the order must be visible from the administration
+section..
+-->
