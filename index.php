@@ -31,7 +31,8 @@ include 'install.php';
 	            <ul id="menu">
 	                    <li><img src="imgs/basket.jpg"><a href="#"></a></li>
 	            </ul>
-	            <div id="form">
+							<a href="http://localhost:8888/admin.html">admin page</a>
+			        <div id="form">
 	                    <form name="login" method="post" action="../functions/loginregister.php">
 	                        <input type="text" name="login" placeholder="Username" / >
 	                        <input type="password" name="password" placeholder="Password" / >

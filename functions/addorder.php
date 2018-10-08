@@ -14,7 +14,7 @@
 
   if (file_exists('cryptos.csv'))
     unlink('cryptos.csv');
-  $_SESSION["basket"] = array(0, 0, 0, 0, 0, 0,);
+  $_SESSION["basket"] = array("0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0");
   return;
 
  ?>
