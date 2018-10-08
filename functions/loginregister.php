@@ -1,8 +1,8 @@
 <?php
-  include "functions/auth.php";
-  include "functions/login.php";
-  include "functions/create.php";
-  include "functions/init.php";
+  include "auth.php";
+  include "login.php";
+  include "create.php";
+  include "init.php";
 
   session_start();
   if (isset($_POST["login"]) && isset($_POST["password"]) && $_POST["submit"] == "Login / Register"){

@@ -33,10 +33,13 @@ include 'install.php';
 	            </ul>
 							<a href="http://localhost:8888/admin.html">admin page</a>
 	            <div id="form">
-	                    <form name="login" method="post" action="loginregister.php">
+	                    <form name="login" method="post" action="../functions/loginregister.php">
 	                        <input type="text" name="login" placeholder="Username" / >
 	                        <input type="password" name="password" placeholder="Password" / >
 	                        <input type="submit" name="submit" value="Login / Register" />
+	                    </form>
+											<form align="right" name="login" method="post" action="functions/logout.php">
+	                        <input type="submit" name="submit" value="Logout" />
 	                    </form>
 	            </div>
 			</div>
@@ -151,7 +154,7 @@ include 'install.php';
         <br />
         <br />
         <h1>Your Order Total: <?php echo $_SESSION["total"][0];?> USD</h1><br />
-        <form method="get" action"results.php" enctype="multipart/form-data">
+        <form method="get" action="functions/addorder.php">
             <input type="submit" name="confirm" value="Confirm Payment" />
         </form>
         </center>

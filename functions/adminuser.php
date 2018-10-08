@@ -1,8 +1,8 @@
 <?php
-  include "functions/auth.php";
-  include "functions/login.php";
-  include "functions/create.php";
-  include "functions/init.php";
+  include "auth.php";
+  include "login.php";
+  include "create.php";
+  include "init.php";
 
   if (!isset($_POST["submit"]))
       print ("Error\n");
