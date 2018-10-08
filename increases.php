@@ -7,7 +7,7 @@
     $_SESSION["coin_instock"][$coin] -= 1;
     $_SESSION['total'][0] += ($_SESSION['coin_price'][$coin] * $_SESSION["coin_incart"][$coin]);
 
-$file = fopen("cryptos.csv","w");
+$file = fopen("data/cryptos.csv","w");
 
 fputcsv($file, $_SESSION['opa']);
 fputcsv($file, $_SESSION['total']);
