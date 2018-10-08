@@ -23,7 +23,7 @@ $file = fopen("cryptos.csv","r");
   //print_r($_SESSION['total']);
   $_SESSION['coin_instock'] = fgetcsv($file);
   $_SESSION['coin_incart'] = fgetcsv($file);
-  print_r($_SESSION['coin_incart']);
+  //print_r($_SESSION['coin_incart']);
   $_SESSION['coin_price'] = fgetcsv($file);
 
  // print_r(fgetcsv($file));
